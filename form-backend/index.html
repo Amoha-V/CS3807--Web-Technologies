@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Event Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Community Event Registration</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="John Doe">
+                <div class="error-message" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="john@example.com">
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                <div class="error-message" id="phoneError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age <span class="required">*</span></label>
+                <input type="number" id="age" name="age" min="18" max="120" placeholder="18">
+                <div class="error-message" id="ageError"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Events You Want to Attend <span class="required">*</span></label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="event" value="workshop"> Community Workshop (June 5)</label>
+                    <label><input type="checkbox" name="event" value="cleanup"> Park Cleanup (June 12)</label>
+                    <label><input type="checkbox" name="event" value="fair"> Local Art Fair (June 19)</label>
+                </div>
+                <div class="error-message" id="eventError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="hearAbout">How did you hear about us?</label>
+                <select id="hearAbout" name="hearAbout">
+                    <option value="">Select an option</option>
+                    <option value="friend">Friend/Family</option>
+                    <option value="social">Social Media</option>
+                    <option value="newsletter">Newsletter</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="specialReq">Special Requirements</label>
+                <textarea id="specialReq" name="specialReq" rows="3" placeholder="Any dietary restrictions or accessibility needs..."></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" disabled>Register</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
